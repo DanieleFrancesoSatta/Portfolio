@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniele Satta | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="neural-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">&lt;Daniele Satta/&gt;</div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <span class="tagline">IT Engineer</span>
+            <h1>Costruisco software <br><span class="gradient-text">complesso, semplice.</span></h1>
+            <p class="hero-desc">
+                Creo un un'identità alla tua azienda.
+            </p>
+            <div class="cta-group">
+                <a href="#projects" class="btn-outline">Vedi Lavori <i class="fas fa-code"></i></a>
+                <a href="https://github.com/DanieleFrancesoSatta" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="www.linkedin.com/in/daniele-francesco-satta-093026347" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:danielefrancescosatta@gmail.com" class="social-icon" title="Invia email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Arsenale Tecnico</h2>
+            <div class="skills-grid">
+                <div class="skill-card hidden-element">
+                    <i class="fas fa-layer-group icon"></i>
+                    <h3>Frontend Engineering</h3>
+                    <p>React, Vanilla JS, CSS3 Moderno. UI/UX pixel-perfect con focus sulle performance di rendering.</p>
+                </div>
+                <div class="skill-card hidden-element">
+                    <i class="fas fa-server icon"></i>
+                    <h3>Backend & API</h3>
+                    <p>Node.js, Python, REST & GraphQL. Progettazione di microservizi robusti e sicuri.</p>
+                </div>
+                <div class="skill-card hidden-element">
+                    <i class="fas fa-database icon"></i>
+                    <h3>Data & DevOps</h3>
+                    <p>PostgreSQL, Docker, CI/CD Pipelines. Gestione infrastruttura e ottimizzazione query.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Case Studies</h2>
+            <div class="projects-wrapper">
+                
+                <article class="project-card hidden-element">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>E-Commerce Gestionale</h3>
+                        <p>Dashboard amministrativa per la gestione magazzino in tempo reale. WebSocket per aggiornamenti live.</p>
+                        <ul class="tech-stack">
+                            <li>Vue.js</li>
+                            <li>Node</li>
+                            <li>Socket.io</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card hidden-element">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>FinTech Dashboard</h3>
+                        <p>Interfaccia di visualizzazione dati finanziari con grafici complessi e calcoli lato client.</p>
+                        <ul class="tech-stack">
+                            <li>React</li>
+                            <li>D3.js</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card hidden-element">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>API Gateway Custom</h3>
+                        <p>Gateway personalizzato per routing e rate-limiting di richieste verso microservizi legacy.</p>
+                        <ul class="tech-stack">
+                            <li>Go</li>
+                            <li>Redis</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xanrzenn" method="POST">
+                <label>
+                    Nome
+                    <input type="text" name="name" required placeholder="Il tuo nome">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required placeholder="tua@email.it">
+                </label>
+                <label>
+                    Messaggio
+                    <textarea name="message" required placeholder="Descrivi la richiesta..."></textarea>
+                </label>
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+                <button type="submit" class="btn-submit">Richiedi Preventivo</button>
+            </form>
+        </div>
+        <p>Progettato & Sviluppato da <span>Daniele</span></p>
+        <p class="copyright">&copy; 2025. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
