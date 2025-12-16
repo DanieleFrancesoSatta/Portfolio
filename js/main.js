@@ -139,4 +139,27 @@ if (contactForm) {
             setTimeout(() => { statusEl.textContent = ''; }, 6000);
         }
     });
+
+    // --- HAMBURGER / MOBILE NAV TOGGLE ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const expanded = navLinks.classList.contains('open');
+            hamburger.setAttribute('aria-expanded', expanded.toString());
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // Ensure menu is closed when resizing to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) navLinks.classList.remove('open');
+        });
+    }
 }
